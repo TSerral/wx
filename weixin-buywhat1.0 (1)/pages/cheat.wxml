@@ -1,0 +1,101 @@
+<view class="container container27417">
+	<diy-navbar bgColor="gradual-orange" isBack="{{true}}">
+		<view slot="backText"> 返回 </view>
+		<view slot="content"> 您的私人理财助理 </view>
+	</diy-navbar>
+	<form bindsubmit="submitForm" class="flex diygw-form flex-direction-column diygw-col-24 form-clz">
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column flex-clz">
+			<view class="diygw-form-item diygw-col-24 input-clz">
+				<view class="title"> 姓名 </view>
+				<view class="input">
+					<input class="flex1" focus="{{formData.inputFocus}}" name="input" comfirm-type="done" type="text" value="{{form.input}}" data-key="form.input" bindchange="changeValue" placeholder="请输入姓名" />
+				</view>
+			</view>
+			<view class="diygw-form-item diygw-col-24 radio-clz">
+				<view class="title title-mb5"> 性别 </view>
+				<view class="input">
+					<radio-group class="flex flex-wrap check-orange diygw-col-24 justify-between" bindchange="changeFormRadio" name="radio">
+						<label wx:for="{{formData.radioDatas}}" wx:for-item="radioitem" wx:for-index="radioindex" data-key="radioindex" class="diygw-radio-label">
+							<radio class="diygw-radio" value="{{radioitem.value}}" checked="{{radioitem.checked}}"> </radio>
+							<view class="diygw-icon-radio {{radioitem.checked?'checked':''}}"></view>
+							<view class="diygw-checkbox-text"> {{ radioitem.label }} </view>
+						</label>
+					</radio-group>
+					<input hidden type="hidden" name="radioLabel" value="{{form.radioLabel}}" />
+				</view>
+			</view>
+
+			<view class="diygw-form-item diygw-col-24 sct-clz">
+				<view class="title"> 风险类型 </view>
+				<view class="input">
+					<picker bindchange="changeFormSct" change="changeFormSct" value="{{form.sctIndex}}" range="{{formData.sctDatas}}" range-key="label">
+						<view class="picker-item" wx:if="{{form.sctIndex>=0}}"> {{formData.sctDatas[form.sctIndex].label}} </view>
+						<view class="picker-item" wx:else> 请选择 </view>
+					</picker>
+					<input hidden type="hidden" name="sctIndex" value="{{form.sctIndex}}" />
+					<input hidden type="hidden" name="sct" value="{{form.sct}}" />
+					<input hidden type="hidden" name="sctLabel" value="{{form.sctLabel}}" />
+				</view>
+			</view>
+			<view class="diygw-form-item diygw-col-24 input3-clz">
+				<view class="title"> 喜欢的颜色 </view>
+				<view class="input">
+					<input class="flex1" focus="{{formData.input3Focus}}" name="input3" comfirm-type="done" type="text" value="{{form.input3}}" data-key="form.input3" bindchange="changeValue" placeholder="请输入你最喜欢的颜色" />
+				</view>
+			</view>
+		</view>
+		<view class="flex flex-wrap diygw-col-24 flex-direction-column flex1-clz">
+			<view  class="diygw-col-9 gradual-orange text1-clz diygw-ellipsis diygw-text-md"> 你好：{{form.input}}{{aaa}} </view>
+			<view class="diygw-form-item diygw-col-24 sct1-clz">
+				<view class="title"> 最想买的 </view>
+				<view class="input">
+					<picker bindchange="changeFormSct1" change="changeFormSct1" value="{{form.sct1Index}}" range="{{formData.sct1Datas}}" range-key="label">
+						<view class="picker-item" wx:if="{{form.sct1Index>=0}}"> {{formData.sct1Datas[form.sct1Index].label}} </view>
+						<view class="picker-item" wx:else> 你最想买的产品 </view>
+					</picker>
+					<input hidden type="hidden" name="sct1Index" value="{{form.sct1Index}}" />
+					<input hidden type="hidden" name="sct1" value="{{form.sct1}}" />
+					<input hidden type="hidden" name="sct1Label" value="{{form.sct1Label}}" />
+				</view>
+			</view>
+			<view class="diygw-form-item diygw-col-24 sct2-clz">
+				<view class="title"> 最讨厌的 </view>
+				<view class="input">
+					<picker bindchange="changeFormSct2" change="changeFormSct2" value="{{form.sct2Index}}" range="{{formData.sct2Datas}}" range-key="label">
+						<view class="picker-item" wx:if="{{form.sct2Index>=0}}"> {{formData.sct2Datas[form.sct2Index].label}} </view>
+						<view class="picker-item" wx:else> 你最讨厌的产品 </view>
+					</picker>
+					<input hidden type="hidden" name="sct2Index" value="{{form.sct2Index}}" />
+					<input hidden type="hidden" name="sct2" value="{{form.sct2}}" />
+					<input hidden type="hidden" name="sct2Label" value="{{form.sct2Label}}" />
+				</view>
+			</view>
+			<view class="diygw-form-item diygw-col-24 flex-direction-column">
+				<view class="title diygw-col-24"> 魔法咒语 </view>
+				<view class="input">
+					<textarea maxlength="200" class="flex1 form_textarea1" name="textarea1" value="{{form.textarea1}}" data-key="form.textarea1" bindchange="changeValue" placeholder="请输入一段文字"></textarea>
+				</view>
+			</view>
+		</view>
+	</form>
+	<view catchtap="navigateTo" data-type="openmodal" data-id="modal" class="diygw-col-24 gradual-orange text-clz diygw-text-md"> 请给我一些建议 </view>
+	<view wx:if="modal" class="diygw-modal basic {{modal}}" style="z-index: 1000000">
+		<view class="diygw-dialog diygw-dialog-modal basis-lg">
+			<view class="justify-end diygw-bar">
+				<view class="content" style="font-size: 18px;"> 您的专属建议 </view>
+				<view class="action" data-type="closemodal" data-id="modal" catchtap="navigateTo">
+					<text class="diy-icon-close"></text>
+				</view>
+			</view>
+			<view>
+				<view class="flex diygw-dialog-content">
+					<view class="diygw-col-24 text2-clz"> 你适合{{answer}} </view>
+				</view>
+			</view>
+			<view class="flex justify-end">
+				<button catchtap="navigateTo" data-type="closemodal" data-id="modal" class="diygw-btn gradual-orange flex1 margin-xs">好！</button>
+			</view>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

@@ -1,0 +1,34 @@
+<view class="container container27417">
+	<view class="flex diygw-col-24 diygw-bottom bar1-clz">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/resetting" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-discover" style="font-size: 22px"> </view>
+					<view class="diygw-grid-title"> 亏了 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-home" style="font-size: 22px"> </view>
+					<view class="diygw-grid-title"> 继续 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/nice" class="diygw-action addon" style="color: #001ffe !important">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-emoji" style="font-size: 22px; color: #001ffe"> </view>
+					<view class="diygw-grid-title"> Nice </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="flex diygw-col-24 timeline-clz">
+		<view class="diygw-timeline">
+			<view wx:for="{{timelineDatas}}" wx:for-item="item" wx:for-index="index" data-key="index" class="{{item.clazz}}" style="{{item.style}}">
+				<view class="content diygw-shadow-blur {{item.backgroundClazz}}" style="{{item.backgroundStyle}}">
+					<rich-text nodes="{{item.content}}"></rich-text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="clearfix"></view>
+</view>

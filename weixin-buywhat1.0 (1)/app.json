@@ -1,0 +1,10 @@
+{
+	"pages": ["pages/index","pages/cheat",  "pages/resetting", "pages/nice", "pages/webview"],
+
+	"window": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "啊啊啊",
+
+		"navigationStyle": "custom"
+	}
+}

@@ -1,0 +1,140 @@
+<view class="container container27417">
+   
+
+
+    <view class="flex flex-wrap diygw-col-24 flex9-clz">
+        <image src="/static/bg1.jpg" class="response diygw-col-24 image-clz" mode="widthFix"></image>
+        <view class="diygw-col-24 text-clz"> 今天你要买什么！ </view>
+        <view class="diygw-col-24 text1-clz"> </view>
+        <view class="flex diygw-col-24 line-clz">
+            <view class="diygw-pzx" style="border-bottom: 1px solid #eee"></view>
+        </view>
+        <view class="flex flex-wrap diygw-col-6 flex-direction-column items-center flex4-clz" bind:tap="sjx">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column justify-center items-center flex7-clz">
+                <text class="flex icon diygw-col-24 icon-clz diy-icon-lihe"></text>
+            </view>
+            <view class="diygw-text-line1 diygw-col-0 text8-clz"> 随机选 </view>
+        </view>
+        <view class="flex flex-wrap diygw-col-6 flex-direction-column items-center flex13-clz" bind:tap="cj">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column justify-center items-center flex14-clz">
+                <text class="flex icon3 diygw-col-24 icon3-clz diy-icon-babyfill"></text>
+            </view>
+            <view class="diygw-text-line1 diygw-col-0 text9-clz"> 抽个奖 </view>
+        </view>
+        <view class="flex flex-wrap diygw-col-6 flex-direction-column items-center flex11-clz" catchtap="navigateTo" data-type="page" data-url="/pages/cheat">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column justify-center items-center flex12-clz">
+                <text class="flex icon2 diygw-col-24 icon2-clz diy-icon-crownfill"></text>
+            </view>
+            <view class="diygw-text-line1 diygw-col-0 text7-clz"> 帮你选 </view>
+        </view>
+        <view class="flex flex-wrap diygw-col-6 flex-direction-column items-center flex8-clz"  catchtap="navigateTo" data-type="openmodal" data-id="modal">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column justify-center items-center flex10-clz">
+                <text class="flex icon1 diygw-col-24 icon1-clz diy-icon-github"></text>
+            </view>
+            <view class="diygw-text-line1 diygw-col-0 text6-clz"> 开个源 </view>
+        </view>
+    </view>
+    <view class="flex flex-wrap diygw-col-24 justify-between items-center flex15-clz">
+        <view class="flex diygw-col-0 items-center flex-nowrap flex16-clz">
+            <view class="diygw-col-24 text10-clz"> </view>
+            <view class="diygw-col-0 text11-clz"> {{iscj?'猜猜你会抽到什么':'我推荐你买！'}} </view>
+        </view>
+    </view>
+    <view class="flex diygw-col-24 flex-direction-column flex-nowrap flex18-clz">
+    
+        <view class="diygw-col-24 text2-clz" style="height: 60px;"> {{currentText}} </view>
+        <view class="flex diygw-col-24 line1-clz">
+            <view class="diygw-pzx" style="border-bottom: 1px solid #eee"></view>
+        </view>
+        <view class="flex diygw-col-24 button-clz">
+            <button bind:tap="stop" class="diygw-btn gradual-orange radius-xl flex-sub margin-xs button-button-clz">{{isRandoming?'停！':'就你了！'}}</button>
+        </view>
+    </view>
+    <view class="flex flex-wrap diygw-col-24 justify-between items-center flex22-clz">
+        <view class="flex diygw-col-0 items-center flex-nowrap flex23-clz">
+            <view class="diygw-col-24 text13-clz"> </view>
+            <view class="diygw-col-0 text14-clz"> 今天我想买什么！ </view>
+        </view>
+    </view>
+    <view class="flex diygw-col-24 flex-wrap flex35-clz">
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex36-clz" bind:tap="jj">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex26-clz">
+                <view class="diygw-col-0 text24-clz"> 买基金！ </view>
+            </view>
+            <text class="flex icon6 diygw-col-0 icon6-clz diy-icon-circle"></text>
+        </view>
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex42-clz" bind:tap="gp">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex43-clz">
+                <view   class="diygw-col-0 text25-clz"> 买股票！ </view>
+            </view>
+            <text class="flex icon8 diygw-col-0 icon8-clz diy-icon-bad"></text>
+        </view>
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex38-clz" bind:tap="qh">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex40-clz">
+                <view class="diygw-col-0 text22-clz"> 买期货！ </view>
+            </view>
+            <text class="flex icon15 diygw-col-0 icon15-clz diy-icon-creative"></text>
+        </view>
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex33-clz" bind:tap="wh">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex34-clz">
+                <view class="diygw-col-0 text20-clz"> 买外汇！ </view>
+            </view>
+            <text class="flex icon13 diygw-col-0 icon13-clz diy-icon-sponsor"></text>
+        </view>
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex30-clz" bind:tap="xnhb">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex31-clz">
+                <view class="diygw-col-0 text18-clz"> 买虚拟货币！ </view>
+            </view>
+            <text class="flex icon10 diygw-col-0 icon10-clz diy-icon-evaluate"></text>
+        </view>
+        <view class="flex flex-wrap diygw-col-12 justify-center items-center flex27-clz"  bind:tap="hj">
+            <view class="flex flex-wrap diygw-col-0 flex-direction-column flex28-clz">
+                <view class="diygw-col-0 text16-clz"> 买黄金！ </view>
+            </view>
+            <text class="flex icon17 diygw-col-0 icon17-clz diy-icon-global"></text>
+        </view>
+    </view>
+    <view class="flex diygw-col-24 diygw-bottom bar4-clz">
+        <view class="diygw-grid diygw-actions">
+            <button catchtap="navigateTo" data-type="page" data-url="/pages/resetting" class="diygw-action">
+                <view class="diygw-grid-inner">
+                    <view class="diygw-grid-icon diygw-avatar radius diy-icon-discover" style="font-size: 22px"> </view>
+                    <view class="diygw-grid-title"> 亏了 </view>
+                </view>
+            </button>
+            <button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action addon" style="color: #001ffe !important">
+                <view class="diygw-grid-inner">
+                    <view class="diygw-grid-icon diygw-avatar radius diy-icon-recharge" style="font-size: 22px; color: #001ffe"> </view>
+                    <view class="diygw-grid-title"> 买买买 </view>
+                </view>
+            </button>
+            <button catchtap="navigateTo" data-type="page" data-url="/pages/nice" class="diygw-action">
+                <view class="diygw-grid-inner">
+                    <view class="diygw-grid-icon diygw-avatar radius diy-icon-emoji" style="font-size: 22px"> </view>
+                    <view class="diygw-grid-title"> 赚了 </view>
+                </view>
+            </button>
+        </view>
+    </view>
+    <view wx:if="modal" class="diygw-modal basic {{modal}}" style="z-index: 1000000">
+        <view class="diygw-dialog diygw-dialog-modal basis-lg">
+            <view class="justify-end diygw-bar">
+                <view class="content" style="font-size: 16px;"> 此项目开源 </view>
+                <view class="action" data-type="closemodal" data-id="modal" catchtap="navigateTo">
+                    <text class="diy-icon-close"></text>
+                </view>
+            </view>
+            <view>
+                <view class="flex diygw-dialog-content">
+                    <view class="diygw-col-24 text4-clz"> 此项目为金融营销作业，由我独立完成，开源地址在下方。 </view>
+                    <view class="diygw-col-24 text12-clz"> 作者：谭杨 </view>
+                    <view class="diygw-col-24 text5-clz"> 我的github地址：xxxxx </view>
+                </view>
+            </view>
+            <view class="flex justify-end">
+                <button catchtap="navigateTo" data-type="closemodal" data-id="modal" class="diygw-btn green flex1 margin-xs">知道了</button>
+            </view>
+        </view>
+    </view>
+    <view class="clearfix"></view>
+</view>

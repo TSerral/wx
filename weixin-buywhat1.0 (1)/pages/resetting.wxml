@@ -1,0 +1,28 @@
+<view class="container container27417">
+	<view class="flex diygw-col-24 diygw-bottom bar1-clz">
+		<view class="diygw-grid diygw-actions">
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/resetting" class="diygw-action addon" style="color: #001ffe !important">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-discover" style="font-size: 22px; color: #001ffe"> </view>
+					<view class="diygw-grid-title"> 重开 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/index" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-home" style="font-size: 22px"> </view>
+					<view class="diygw-grid-title"> 继续买 </view>
+				</view>
+			</button>
+			<button catchtap="navigateTo" data-type="page" data-url="/pages/nice" class="diygw-action">
+				<view class="diygw-grid-inner">
+					<view class="diygw-grid-icon diygw-avatar radius diy-icon-emoji" style="font-size: 22px"> </view>
+					<view class="diygw-grid-title"> 赚了 </view>
+				</view>
+			</button>
+		</view>
+	</view>
+	<view class="diygw-col-24 tmap-clz">
+		<map style="width: 100%; height: 800px" latitude="{{tmap.latitude}}" bindmarkertap="clickTmapMarker" longitude="{{tmap.longitude}}" markers="{{tmap.markers}}"> </map>
+	</view>
+	<view class="clearfix"></view>
+</view>

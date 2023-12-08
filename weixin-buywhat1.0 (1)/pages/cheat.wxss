@@ -1,0 +1,104 @@
+.form-clz {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+.flex-clz {
+	margin-left: 5px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 0px 0px 3px 1px rgba(31, 31, 31, 0.11);
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.flex1-clz {
+	margin-left: 5px;
+	border-bottom-left-radius: 6px;
+	box-shadow: 0px 0px 3px 1px rgba(31, 31, 31, 0.11);
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 6px;
+	margin-top: 5px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.text1-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 60px;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left: 8px;
+	font-size: 10px !important;
+	padding-bottom: 8px;
+	border-top-right-radius: 60px;
+	margin-right: 5px;
+	background-color: #e98234;
+	margin-left: 5px;
+	overflow: hidden;
+	width: calc(37.5% - 5px - 5px) !important;
+	border-top-left-radius: 60px;
+	margin-top: 5px;
+	border-bottom-right-radius: 60px;
+	margin-bottom: 5px;
+	text-align: center;
+	padding-right: 8px;
+}
+.form_textarea1 {
+	height: 110px !important;
+}
+.text-clz {
+	padding-top: 8px;
+	border-bottom-left-radius: 60px;
+	color: #ffffff;
+	font-weight: bold;
+	padding-left: 8px;
+	font-size: 14px !important;
+	padding-bottom: 8px;
+	border-top-right-radius: 60px;
+	margin-right: 5px;
+	background-color: #e26233;
+	margin-left: 5px;
+	overflow: hidden;
+	width: calc(100% - 5px - 5px) !important;
+	border-top-left-radius: 60px;
+	margin-top: 5px;
+	border-bottom-right-radius: 60px;
+	margin-bottom: 5px;
+	text-align: center;
+	padding-right: 8px;
+}
+.modal-clz {
+	animation-duration: 2000ms;
+	z-index: 1000000;
+	-webkit-animation-duration: 2000ms;
+	animation-delay: 100ms;
+	-webkit-animation-delay: 100ms;
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;
+}
+.diygw-dialog-modal {
+}
+.text2-clz {
+	margin-left: 5px;
+	width: calc(100% - 5px - 5px) !important;
+	font-size: 25px !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+.container27417 {
+	padding-left: 0px;
+	padding-right: 0px;
+
+	font-size: 15px;
+}
+.container27417 {
+}
